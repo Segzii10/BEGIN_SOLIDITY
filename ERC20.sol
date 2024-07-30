@@ -67,13 +67,4 @@ contract ERC20 is IERC20 {
         emit Transfer(sender, msg.sender, amount);
         return true;
     }
-
-
-
-
-
-
-
-
-
 }
