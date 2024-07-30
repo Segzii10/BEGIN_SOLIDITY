@@ -3,8 +3,8 @@ pragma solidity ^0.8.19;
 
 interface IERC20 {
     // Returns the amount of tokens in existence.
+    function totalSupply() external view  returns (uint256);
    
-
     // Returns the amount of tokens owned by `account`.
     function balanceOf(address account) external view returns (uint256);
 
