@@ -62,6 +62,11 @@ contract EnglishAuction {
         payable(msg.sender).transfer(bal);
         emit withdraws(msg.sender, bal);
     }
+     // time left for the auction
+	function timeLeft() public view returns (uint256) {
+         return auctionTimeEnded - block.timestamp;
+     }
+
     // can only be called by the highest bidder 
     // eth is transfered to the seller
     // highest bidder get the nft in return
