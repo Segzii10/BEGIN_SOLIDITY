@@ -64,7 +64,7 @@ contract EnglishAuction {
     }
      // time left for the auction
 	function timeLeft() public view returns (uint256) {
-         return auctionTimeEnded - block.timestamp;
+         return EndAt - block.timestamp;
      }
 
     // can only be called by the highest bidder 
