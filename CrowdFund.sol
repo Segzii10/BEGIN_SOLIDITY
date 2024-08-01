@@ -11,12 +11,18 @@ pledge their tokens to this contract
 import "./ERC20.sol";
 
 contract CrowdFund{
-
+    // emitted when an address launch a campaign
     event Launch(address indexed owner, uint indexed goal, uint duration);
+    // emitted when the creator cancel the campaign before it is launch
     event Cancel(uint id);
+    // emitted when an address unpledge token from the contract
     event unpledged(address owners, uint id, uint amount);
+    // emitted when the creator claimed the tokens
     event Claim(address owner, uint id, uint amountClaimed);
+    // emitted when some tokens are pledged to this contract
     event Pledge(address campaigners, uint amount);
+    // if the amount pledged to this contract doesnt reach the required goal
+    // address can get a refund
     event Refund(address owners, uint amount);
 
     struct Campaign {
