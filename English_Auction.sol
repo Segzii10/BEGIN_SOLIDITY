@@ -72,7 +72,7 @@ contract EnglishAuction {
     // eth is transfered to the seller
     // highest bidder get the nft in return
     function end() external payable {
-        require(msg.sender == highestBidder, "You are not the highest bidder");
+        require(msg.sender == seller, "Not authorized");
         require(block.timestamp > EndAt, "The auction hasnt ended yet");
         Ended = true;
 
