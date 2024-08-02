@@ -64,6 +64,7 @@ contract EnglishAuction {
     }
      // time left for the auction
 	function timeLeft() public view returns (uint256) {
+         require(block.timestamp < EndAt, "No time left");
          return EndAt - block.timestamp;
      }
 
