@@ -68,7 +68,7 @@ contract EnglishAuction {
          return EndAt - block.timestamp;
      }
 
-    // can only be called by the highest bidder 
+    // can only be called by the seller
     // eth is transfered to the seller
     // highest bidder get the nft in return
     function end() external payable {
