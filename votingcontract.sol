@@ -17,7 +17,7 @@ contract Voting {
         votes.push(Vote({
             voter : msg.sender,
             choice : _choice
-        });
+        }));
         voted[msg.sender] = true;
     }
     
